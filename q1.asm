@@ -1,33 +1,18 @@
-.data
-	Numero1: .asciiz "Primeiro: "
-	Numero2: .asciiz "segundo: "
+.data:
 	Resultado: .asciiz "Resultado: "
 
 .text
-	li $v0, 4
-	la $a0, Numero1
-	syscall
+	li $s1, 55
+	li $s2, 45
 	
-	li $v0, 5
-	syscall
+	add $t0, $s1, $s2
+	# t0 = 55 + 45
 	
-	move $t0, $v0
-	
-	li $v0, 4
-	la $a0, Numero2
-	syscall
-	
-	li $v0, 5
-	syscall
-
-	move $t1, $v0
-	
-	add $t2, $t1, $t0
-	
-	li $v0, 4
+	li $v0, 4 # codigo pra printar string
 	la $a0, Resultado
+	# printa a mensagem
 	syscall
-
-	li $v0, 1
-	move $a0, $t2
+ 
+	li $v0, 1 # codigo pra printar inteiro
+	move $a0, $t0
 	syscall
