@@ -8,7 +8,7 @@ add $t0, $zero, $zero # $t0 receve a soma de dois zeros, ...
 # - ele sempre será incrementado ($v0+=1) caso as posições nas duas arrays sejam iguais
 
 	
-# letra B) 
+# letra B) 0.0000000085 s.
 outer:
 	add $t4, $a0, $t0 # $t4 recebendo a soma de $a0 e $t0 ... $t4 = $a0 + 0
 	lw $t4, 0($t4) # Load Word - $t4 recebe o valor do array na posição $t4
