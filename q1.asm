@@ -1,4 +1,4 @@
-.data:
+.data
 	Resultado: .asciiz "Resultado: "
 
 .text
